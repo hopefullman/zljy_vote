@@ -17,7 +17,7 @@ class App extends Component{
     return (
     <BrowserRouter>
       <Switch>
-        <Route exact path='/:eventIds' component={activityList}></Route>
+        <Route exact path='/' component={activityList}></Route>
         <Route exact path='/showAllActivityList' component={showAllActivityList}></Route>
         <Route exact path='/activityListDetail/:eventId' component={activityListDetail}></Route>
         <Route exact path='/voteList/:eventId' component={voteList}></Route>
