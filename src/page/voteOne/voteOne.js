@@ -19,8 +19,12 @@ class voteOne extends Component{
     }
   }
 async  componentDidMount(){
-    let openid=window.openid;
+    let query_params = new URLSearchParams(this.props.location.search);
+    let openid = query_params.get("openid");
+    alert('openiddddd',openid);
+    window.openid=openid;
     goodsId=this.props.match.params.goodsId;
+    // let openid=window.openid;
     // let query_params = new URLSearchParams(this.props.location.search);
     // let queryeventId = query_params.get("eventId");
     // let querygoodsId = query_params.get("goodsId");
@@ -54,7 +58,7 @@ async  componentDidMount(){
       console.log('err voteOne时候，取投票详情发生错误！');
     })
     //在此处获取openid，并且发送请求查看此人是否为此作品投过票
-    axios.get(`${configUrl}api/vote/voted?goodsId=${goodsId}&openid=${openid}`)
+    axios.get(`${configUrl}api/vote/voted?goodsId=${goodsId}&openid=${window.openid}`)
     .then((res)=>{
       this.setState({
         voted:res.data
@@ -150,16 +154,16 @@ async  componentDidMount(){
       {
         this.state.voted?<div className="voted_btn_true">
          <Button onClick={this.voted.bind(this)}>已 为 TA 投 票</Button>
-        {/*<CopyToClipboard text="https://ethoss.oss-cn-beijing.aliyuncs.com/eth_oss_file/20191214/2019121417283731548057.jpg" onCopy={this.onCopy.bind(this)}>
-          <Button type="danger">复制公众号链接</Button>
-         </CopyToClipboard>*/}
+        <CopyToClipboard text="https://ethoss.oss-cn-beijing.aliyuncs.com/eth_oss_file/20191214/2019121417283731548057.jpg" onCopy={this.onCopy.bind(this)}>
+          <Button type="danger">复制公众号二维码</Button>
+         </CopyToClipboard>
       </div>:<div className="voted_btn_false">
         <Button type="primary" onClick={this.voting.bind(this)}>为 TA 投 票</Button>
-      {/*
+      
         <CopyToClipboard text="https://ethoss.oss-cn-beijing.aliyuncs.com/eth_oss_file/20191214/2019121417283731548057.jpg" onCopy={this.onCopy.bind(this)}>
-          <Button type="danger" >复制公众号链接</Button>
+          <Button type="danger" >复制公众号二维码</Button>
         </CopyToClipboard>
-        */}
+        
       </div>
       }      
       <Modal

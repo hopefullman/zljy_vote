@@ -8,10 +8,16 @@ import voteOne from './page/voteOne/voteOne.js';
 import Fail from './page/Fail/Fail.js';
 import Search from './page/Search/Search.js';
 import 'antd/dist/antd.css';
-window.openid="ouI9nwPvCIYVSyR_y51AifcX1yMI";
+// window.openid="ouI9nwPvCIYVSyR_y51AifcX1yMI";
 class App extends Component{
   constructor(props){
     super(props);
+  }
+  componentDidMount(){
+    let query_params = new URLSearchParams(this.props.location.search);
+    let openid = query_params.get("openid");
+    alert('openid',openid);
+    window.openid=openid;
   }
   render(){
     return (
