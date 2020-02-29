@@ -1,0 +1,94 @@
+.voteList{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+.search{
+	/*position: fixed;
+	top: 0px;*/
+	width: 100%;
+	height: 35px;
+	margin-top: 3px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	color: rgba(0,0,0,.5);
+}
+.search button{
+	font-size: 13px;
+	padding: 3px 5px 3px 10px;
+}
+/*.voteList_body{
+	margin-top: 40px;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}*/
+.voteListItem{
+	width: 94%;
+	height:140px;
+	margin: 15px 10px;
+	overflow: hidden;
+	border: 1px solid #f5e1e1;
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px #999;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+.voteListItem>img{
+	display: block;
+	width: 40%;
+	height: 140px;
+	border-radius: 10px;
+}
+.vote_body{
+	overflow: hidden;
+	width: 59%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+.vote_title{
+	width: 100%;
+	/*height: 20px;
+	line-height: 20px;*/
+	padding: 0px 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.vote_title>span{
+	font-size: 13px;
+	color: rgba(0, 0, 0, 0.85);
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.vote_content{
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.75);
+	padding: 0px 10px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+

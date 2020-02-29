@@ -1,0 +1,126 @@
+
+.voteOne{
+	width: 100%;
+	height: auto;
+	margin-top: 10px;
+	margin-bottom: 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+.voteOne_work{
+	padding-top: 30px;
+	font-size:22px;
+	font-weight: 600;
+	color: #52c41a;
+}
+.voteOne_work>h2{
+	margin: 0px;
+	padding: 0px;
+	color: #52c41a;
+}
+.voteOne_name{
+	padding-top: 5px;
+	font-size:16px;
+	font-weight: bold;
+	color: #000;
+}
+.voteOne_name>h3{
+	margin: 0px;
+	padding: 0px;
+	color: #000;
+}
+.voteOne_content{
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.75);
+	padding: 0px 10px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.voteOneImg{
+	display: block;
+	width: 96%;
+	height: auto;
+	margin-top: 10px;
+	border: 0px;
+}
+.voteOne_works{
+	padding-top: 30px;
+	font-size:20px;
+	font-weight: 500;
+	color: #52c41a;
+}
+.voteOne_product{
+	width: 90%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	font-size:15px;
+	height: 35px;
+}
+.voteOne_mans{
+	width: 90%;
+	height: 30px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+.voteOne_mans_title{
+	width: 17%;
+	height: 30px;
+	line-height: 30px;
+	font-size: 15px;
+	overflow: hidden;
+}
+.voteOne_mans_headimgurl{
+	width: 80%;
+	height: 30px;
+	padding-left: 10px;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.voteOne_mans_headimgurl>img{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	margin: 0px -5px;
+	overflow: hidden;
+}
+.voted_btn_false{
+	width: 100%;
+	height: 45px;
+	position: fixed;
+	bottom: 0px;
+	display:flex;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+.voted_btn_false>button{
+	width: 100%;
+	height: 45px;
+	font-size: 16px;
+}
+.voted_btn_true{
+	width: 100%;
+	height: 45px;
+	position: fixed;
+	bottom: 0px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+.voted_btn_true>button{
+	width: 100%;
+	height: 45px;
+	font-size: 16px;
+}

@@ -1,0 +1,14 @@
+.fail{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow-x: hidden;
+}
+.fail>img{
+	display: block;
+	width: 90%;
+	height: auto;
+}
