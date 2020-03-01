@@ -14,8 +14,8 @@ class activityListDetail extends Component{
   componentDidMount(){    
     if (window.openid==undefined||window.openid==null) {
         let oldarray=window.location.href.split('=');
-        window.openid=oldarray[1]
-        alert(window.openid);
+        let openid=oldarray[1];
+        sessionStorage.setItem('openid',openid);
     }
     
     let eventId=this.props.match.params.eventId;

@@ -19,7 +19,6 @@ class voteOne extends Component{
     }
   }
 async  componentDidMount(){
-    alert(window.openid);
     goodsId=this.props.match.params.goodsId;
     //在此处获取投票详情
     axios.get(`${configUrl}api/goods/${goodsId}`)
@@ -33,7 +32,8 @@ async  componentDidMount(){
       console.log('err voteOne时候，取投票详情发生错误！');
     })
     //在此处获取openid，并且发送请求查看此人是否为此作品投过票
-    axios.get(`${configUrl}api/vote/voted?goodsId=${goodsId}&openid=${window.openid}`)
+    let openid=sessionStorage.getItem('openid');
+    await axios.get(`${configUrl}api/vote/voted?goodsId=${goodsId}&openid=${openid}`)
     .then((res)=>{
       this.setState({
         voted:res.data
@@ -49,14 +49,14 @@ async  componentDidMount(){
     });
   }
   handleOk = e => {
-    console.log(e);
+    let openid=sessionStorage.getItem('openid');
     this.setState({
       visible: false
     });
     //发一个请求，将iid,openid发的送出去,进行投票
     let data={
       goodsId:goodsId,
-      openid:window.openid
+      openid:openid
     }
     axios.post(`${configUrl}api/vote`,data)
     .then((res)=>{
