@@ -19,32 +19,7 @@ class voteOne extends Component{
     }
   }
 async  componentDidMount(){
-    let query_params = new URLSearchParams(this.props.location.search);
-    let openid = query_params.get("openid");
-    alert('openiddddd',openid);
-    window.openid=openid;
     goodsId=this.props.match.params.goodsId;
-    // let openid=window.openid;
-    // let query_params = new URLSearchParams(this.props.location.search);
-    // let queryeventId = query_params.get("eventId");
-    // let querygoodsId = query_params.get("goodsId");
-    // if (queryeventId) {
-    //     eventId=queryeventId
-    //     sessionStorage.setItem('eventId',eventId);
-    //     console.log("截取到eventId");
-    // }else{
-    //   eventId=sessionStorage.getItem('eventId');
-    //   console.log("没有截取到eventId");
-    // }
-    // if (querygoodsId) {
-    //   goodsId=querygoodsId
-    //   sessionStorage.setItem('goodsId',goodsId);
-    //   console.log("截取到goodsId");
-    // }else{
-    //   goodsId=this.props.match.params.goodsId;
-    //   sessionStorage.setItem('goodsId',goodsId);
-    //   console.log("没有截取到goodsId");
-    // }
     
     //在此处获取投票详情
     axios.get(`${configUrl}api/goods/${goodsId}`)

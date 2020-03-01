@@ -11,11 +11,17 @@ class activityListDetail extends Component{
       activityListDetail:''
     }
   }
-  componentDidMount(){
+  componentDidMount(){    
+    if (window.openid==undefined||window.openid==null) {
+        let oldarray=window.location.href.split('=');
+        window.openid=oldarray[1];
+        alert(window.openid);
+    }
+    
     let eventId=this.props.match.params.eventId;
     axios.get(`${configUrl}api/event/${eventId}`)
     .then((res)=>{
-      console.log('activityListDetail',res)
+      // console.log('activityListDetail',res)
       this.setState({
         activityListDetail:res.data
       })
