@@ -94,7 +94,7 @@ async  componentDidMount(){
   voted(){
    message.config({
     top: 100,
-    duration: 2,
+    duration: 1,
     maxCount: 3,
   });
     message.info('已成功为TA投票，请不要重复投票！')
