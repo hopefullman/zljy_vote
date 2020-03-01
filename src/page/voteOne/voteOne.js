@@ -18,7 +18,10 @@ class voteOne extends Component{
       visible:false
     }
   }
+urls=''
 async  componentDidMount(){
+    let url=window.location.href;
+    this.urls=url.substring(0,url.indexOf("com")+4);
     goodsId=this.props.match.params.goodsId;
     //在此处获取投票详情
     axios.get(`${configUrl}api/goods/${goodsId}`)
@@ -129,13 +132,13 @@ async  componentDidMount(){
       {
         this.state.voted?<div className="voted_btn_true">
          <Button onClick={this.voted.bind(this)}>已 为 TA 投 票</Button>
-        <CopyToClipboard text="https://ethoss.oss-cn-beijing.aliyuncs.com/eth_oss_file/20191214/2019121417283731548057.jpg" onCopy={this.onCopy.bind(this)}>
+        <CopyToClipboard text={`${this.urls}logo.jpg`} onCopy={this.onCopy.bind(this)}>
           <Button type="danger">复制公众号二维码</Button>
          </CopyToClipboard>
       </div>:<div className="voted_btn_false">
         <Button type="primary" onClick={this.voting.bind(this)}>为 TA 投 票</Button>
       
-        <CopyToClipboard text="https://ethoss.oss-cn-beijing.aliyuncs.com/eth_oss_file/20191214/2019121417283731548057.jpg" onCopy={this.onCopy.bind(this)}>
+        <CopyToClipboard text={`${this.urls}logo.jpg`} onCopy={this.onCopy.bind(this)}>
           <Button type="danger" >复制公众号二维码</Button>
         </CopyToClipboard>
         
