@@ -60,7 +60,6 @@ async  componentDidMount(){
     }
     axios.post(`${configUrl}api/vote`,data)
     .then((res)=>{
-      alert(res.data.message);
       if (res.data.message=='ok') {
         message.info('投票成功！');
         this.setState({
