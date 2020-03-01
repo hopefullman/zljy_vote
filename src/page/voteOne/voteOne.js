@@ -19,8 +19,8 @@ class voteOne extends Component{
     }
   }
 async  componentDidMount(){
+    alert(window.openid);
     goodsId=this.props.match.params.goodsId;
-    
     //在此处获取投票详情
     axios.get(`${configUrl}api/goods/${goodsId}`)
     .then((res)=>{
@@ -60,6 +60,7 @@ async  componentDidMount(){
     }
     axios.post(`${configUrl}api/vote`,data)
     .then((res)=>{
+      alert(res.data.message);
       if (res.data.message=='ok') {
         message.info('投票成功！');
         this.setState({

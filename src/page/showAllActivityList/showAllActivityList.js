@@ -14,7 +14,6 @@ class showAllActivityList extends Component{
   componentDidMount(){
     axios.get(`${configUrl}api/event/list`)
     .then((res)=>{
-      console.log('showAllActivityList',res.data.content)
       this.setState({
         activityList:res.data.content
       })

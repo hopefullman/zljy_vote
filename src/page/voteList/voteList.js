@@ -14,7 +14,6 @@ class voteList extends Component{
   }
   componentDidMount(){
     let eventId=this.props.match.params.eventId;
-    // sessionStorage.setItem('eventId',eventId);
     axios.get(`${configUrl}api/goods/contribute/list/${eventId}`)
     .then((res)=>{
       console.log('voteList',res.data.content)

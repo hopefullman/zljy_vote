@@ -48,7 +48,6 @@ class activityList extends Component{
               <div className="activity_title">
                 <h2><Icon type="clock-circle" theme="twoTone" twoToneColor="#52c41a"/>时间：{item.startTime}</h2>
               </div>
-              {/*<div className="activity_content">简介：{item.content}</div>*/}
             </div>
             <div className="activityListItem_content" onClick={this.handleShowActivity.bind(this)}>查看少儿画所有活动<Icon type="right" /></div>
           </div>
