@@ -80,17 +80,18 @@
 	overflow: hidden;
 }
 .voteOne_mans_headimgurl{
-	width: 80%;
+	width: 83%;
 	height: 30px;
-	padding-left: 10px;
+	padding-left: 15px;
 	overflow: hidden;
 	box-sizing: border-box;
 }
 .voteOne_mans_headimgurl>img{
 	width: 20px;
 	height: 20px;
+	display: inline-block;
 	border-radius: 10px;
-	margin: 0px -5px;
+	margin-right: -10px;
 	overflow: hidden;
 }
 .voted_btn_false{

@@ -26,6 +26,7 @@ async  componentDidMount(){
     //在此处获取投票详情
     axios.get(`${configUrl}api/goods/${goodsId}`)
     .then((res)=>{
+      console.log(res);
       this.setState({
         voteOne:res.data,
         voteList:res.data.voteList
@@ -71,6 +72,7 @@ async  componentDidMount(){
         //重新在此处获取投票详情
         axios.get(`${configUrl}api/goods/${goodsId}`)
         .then((res)=>{
+          console.log(res)
           this.setState({
             voteOne:res.data,
             voteList:res.data.voteList
