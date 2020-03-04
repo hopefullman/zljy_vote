@@ -13,7 +13,7 @@ class activityListDetail extends Component{
   }
   componentDidMount(){
   let webSocketUrl = "ws://m.zhonglianjiye.com/socket/goods/25";
-    socket = new WebSocket(webSocketUrl);
+    let socket = new WebSocket(webSocketUrl);
     socket.onopen=function () {
         console.log("成功连接服务器！");
     }
