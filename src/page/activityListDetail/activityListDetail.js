@@ -12,22 +12,6 @@ class activityListDetail extends Component{
     }
   }
   componentDidMount(){
-  // let webSocketUrl = "ws://m.zhonglianjiye.com/socket/goods/25";
-  //   let socket = new WebSocket(webSocketUrl);
-  //   socket.onopen=function () {
-  //       console.log("成功连接服务器！");
-  //   }
-  //   socket.onclose=function (e) {
-  //       console.log(e);
-  //   }
-  //   socket.onmessage=function (e) {
-  //       let data = JSON.parse(e.data);
-  //       console.log(data)
-  //       // $("#remain_day").text(data.days);
-  //       // $("#remain_hour").text(data.hours<10?"0"+data.hours:data.hours);
-  //       // $("#remain_minute").text(data.minutes<10?"0"+data.minutes:data.minutes);
-  //       // $("#remain_second").text(data.seconds<10?"0"+data.seconds:data.seconds);
-  //   } 
     if (window.openid==undefined||window.openid==null) {
         let oldarray=window.location.href.split('=');
         let openid=oldarray[1];
@@ -48,9 +32,6 @@ class activityListDetail extends Component{
   handleActivityItem(eventId){
     this.props.history.push(`/voteList/${eventId}`);
   }
-  handleShowActivity(){
-    this.props.history.push(`/showAllActivityList`);
-  }
   render(){
     return (
       <div className="activityList">
@@ -70,9 +51,8 @@ class activityListDetail extends Component{
               </div>
               <div className="activity_content">简介：{this.state.activityListDetail.content}</div>
             </div>
-            <div className="activityListItem_content" onClick={this.handleShowActivity.bind(this)}>查看少儿画所有活动<Icon type="right" /></div>
-            </div>
           </div>
+          <div className="activityListItem_content" onClick={this.handleShowActivity.bind(this)}>查看少儿画所有活动<Icon type="right" /></div>
       </div>
   );
   }
