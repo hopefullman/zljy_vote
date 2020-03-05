@@ -32,6 +32,9 @@ class activityListDetail extends Component{
   handleActivityItem(eventId){
     this.props.history.push(`/voteList/${eventId}`);
   }
+  handleShowActivity(){
+    this.props.history.push(`/showAllActivityList`);
+  }
   render(){
     return (
       <div className="activityList">
