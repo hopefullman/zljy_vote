@@ -11,23 +11,7 @@ class activityListDetail extends Component{
       activityListDetail:''
     }
   }
-  componentDidMount(){
-  // let webSocketUrl = "ws://m.zhonglianjiye.com/socket/goods/25";
-  //   let socket = new WebSocket(webSocketUrl);
-  //   socket.onopen=function () {
-  //       console.log("成功连接服务器！");
-  //   }
-  //   socket.onclose=function (e) {
-  //       console.log(e);
-  //   }
-  //   socket.onmessage=function (e) {
-  //       let data = JSON.parse(e.data);
-  //       console.log(data)
-  //       // $("#remain_day").text(data.days);
-  //       // $("#remain_hour").text(data.hours<10?"0"+data.hours:data.hours);
-  //       // $("#remain_minute").text(data.minutes<10?"0"+data.minutes:data.minutes);
-  //       // $("#remain_second").text(data.seconds<10?"0"+data.seconds:data.seconds);
-  //   } 
+  componentDidMount(){ 
     if (window.openid==undefined||window.openid==null) {
         let oldarray=window.location.href.split('=');
         let openid=oldarray[1];
