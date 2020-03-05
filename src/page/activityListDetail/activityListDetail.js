@@ -32,9 +32,6 @@ class activityListDetail extends Component{
   handleActivityItem(eventId){
     this.props.history.push(`/voteList/${eventId}`);
   }
-  handleShowActivity(){
-    this.props.history.push(`/showAllActivityList`);
-  }
   render(){
     return (
       <div className="activityList">
@@ -55,7 +52,6 @@ class activityListDetail extends Component{
               <div className="activity_content">简介：{this.state.activityListDetail.content}</div>
             </div>
           </div>
-          <div className="activityListItem_content" onClick={this.handleShowActivity.bind(this)}>查看少儿画所有活动<Icon type="right" /></div>
       </div>
   );
   }
