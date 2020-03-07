@@ -39,6 +39,7 @@ async  componentDidMount(){
     let openid=sessionStorage.getItem('openid');
     await axios.get(`${configUrl}api/vote/voted?goodsId=${goodsId}&openid=${openid}`)
     .then((res)=>{
+      console.log('判断投票与否',res);
       this.setState({
         voted:res.data
       })
@@ -64,6 +65,7 @@ async  componentDidMount(){
     }
     axios.post(`${configUrl}api/vote`,data)
     .then((res)=>{
+      console.log('投票',res)
       if (res.data.message=='ok') {
         message.info('投票成功！');
         this.setState({
