@@ -11,11 +11,11 @@ class activityListDetail extends Component{
       activityListDetail:''
     }
   }
-  componentDidMount(){ 
-    if (window.openid==undefined||window.openid==null) {
-        let oldarray=window.location.href.split('=');
-        let openid=oldarray[1];
-        sessionStorage.setItem('openid',openid);
+  componentDidMount(){
+    if (sessionStorage.getItem('openid')==undefined||sessionStorage.getItem('openid')==null||sessionStorage.getItem('openid')=='undefined') {
+      let oldarray=window.location.href.split('=');
+      let openid=oldarray[1];
+      sessionStorage.setItem('openid',openid);
     }
     
     let eventId=this.props.match.params.eventId;
