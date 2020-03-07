@@ -77,9 +77,12 @@
 	-webkit-line-clamp:2;*/
 }
 .activityListItem_content{
-	width: 100%;
+	width: 92%;
 	height: 35px;
 	line-height: 35px;
 	text-align: center;
 	color: #1890ff;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	box-shadow: 3px 3px 3px #999;
 }
