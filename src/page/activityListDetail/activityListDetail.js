@@ -55,7 +55,7 @@ class activityListDetail extends Component{
               <div className="activity_content">简介：{this.state.activityListDetail.content}</div>
             </div>
             <div className="activity_titles">
-                查看活动详情
+                查看活动详情>>
             </div>
           </div>
           <div className="activityListItem_content" onClick={this.handleShowActivity.bind(this)}>查看少儿画所有活动<Icon type="right" />
