@@ -149,7 +149,7 @@ async  componentDidMount(){
       </div>
       }      
       <Modal
-          title=<p style={{color:"#1890ff"}}>投票提示<Icon type="question-circle" /></p>
+          title=<p style={{color:"#1890ff"}}>投票提示</p>
           visible={this.state.visible}
           onOk={this.handleOk}
           onCancel={this.handleCancel}
