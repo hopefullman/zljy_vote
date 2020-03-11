@@ -21,7 +21,7 @@
 	align-items: center;
 }
 .activityListItem_header{
-	border-bottom: 1px solid #ddd;
+	/*border-bottom: 1px solid #ddd;*/
 }
 .activityListItem_header>img{
 	display: block;
@@ -78,8 +78,8 @@
 }
 .activityListItem_content{
 	width: 92%;
-	height: 35px;
-	line-height: 35px;
+	height: 40px;
+	line-height: 40px;
 	text-align: center;
 	color: #1890ff;
 	border:1px solid #ddd; 
@@ -89,6 +89,7 @@
 }
 .activity_titles{
 	width: 100%;
+	color: #1890ff;
 	font-size: 15px;
 	display: flex;
 	flex-direction: row;
