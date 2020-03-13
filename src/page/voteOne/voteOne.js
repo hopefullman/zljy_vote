@@ -12,6 +12,7 @@ class voteOne extends Component{
   constructor(props){
     super(props);
     this.state={
+      downloadQrcode:'',
       voteOne:'',
       voteList:[],
       voted:false,
@@ -47,6 +48,18 @@ async  componentDidMount(){
     .catch((err)=>{
       console.log('err voteOne时候，HAS取投票详情发生错误！');
     })
+    var u = navigator.userAgent;
+    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+    if(isiOS){
+        this.setState({
+          downloadQrcode:this.urls+qrcodeios
+        })
+    }else if(isAndroid){
+        this.setState({
+          downloadQrcode:this.urls+qrcodeandroid
+        })
+    }
   }
   voting(){
     this.setState({
@@ -131,6 +144,10 @@ async  componentDidMount(){
           )
         })
       }
+      </div>
+      <div>
+        <span></span>
+        <img src={`${this.state.downloadQrcode}`}/>
       </div>
       </div>
       {
