@@ -53,11 +53,11 @@ async  componentDidMount(){
     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
     if(isiOS){
         this.setState({
-          downloadQrcode:this.urls+qrcodeios
+          downloadQrcode:this.urls+'qrcodeios.png'
         })
     }else if(isAndroid){
         this.setState({
-          downloadQrcode:this.urls+qrcodeandroid
+          downloadQrcode:this.urls+'qrcodeandroid.png'
         })
     }
   }
