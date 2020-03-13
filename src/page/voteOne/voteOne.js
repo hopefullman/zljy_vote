@@ -135,20 +135,20 @@ async  componentDidMount(){
       <div className="voteOne_product">作品编号：{this.state.voteOne.iid}</div>
       <div className="voteOne_product">投票数量：{this.state.voteOne.voted}</div>
       <div className="voteOne_mans">
-      <div className="voteOne_mans_title">投票人员</div>
-      <div className="voteOne_mans_headimgurl">
-      {
-        this.state.voteList.map((item,index)=>{
-          return(
-            <img src={`${item.headimgurl}`} key={index} alt=""/>
-          )
-        })
-      }
+        <div className="voteOne_mans_title">投票人员</div>
+        <div className="voteOne_mans_headimgurl">
+        {
+          this.state.voteList.map((item,index)=>{
+            return(
+              <img src={`${item.headimgurl}`} key={index} alt=""/>
+            )
+          })
+        }
+        </div>
       </div>
-      <div>
-        <span></span>
+      <div className="qrcode">
+        <span>识别下方二维码，下载少儿画app，即可发起投票活动!</span>
         <img src={`${this.state.downloadQrcode}`}/>
-      </div>
       </div>
       {
         this.state.voted?<div className="voted_btn_true">

@@ -125,3 +125,21 @@
 	height: 45px;
 	font-size: 16px;
 }
+.qrcode{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+.qrcode>span{
+	color: #000;
+	font-size: 14px;
+}
+.qrcode>img{
+	display: block;
+	width: 90%;
+	height: auto;
+	margin:5px auto; 
+}
