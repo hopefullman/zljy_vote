@@ -135,11 +135,11 @@
 }
 .qrcode>span{
 	color: #000;
-	font-size: 14px;
+	font-size: 16px;
 }
 .qrcode>img{
 	display: block;
 	width: 90%;
 	height: auto;
-	margin:5px auto; 
+	margin:0px auto; 
 }
