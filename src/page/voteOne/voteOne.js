@@ -133,8 +133,9 @@ async  componentDidMount(){
           <div className="border">
             <span>参赛方式</span>
           </div>
-          <img src={`${this.state.downloadQrcode}`}/>
           <p>若您想参加大赛，请您在少儿画app中上传画作。识别上方二维码，下载注册登录少儿画app！</p>
+          <img src={`${this.state.downloadQrcode}`}/>
+          
         </div>
       </div>
       <div className="arrow">
