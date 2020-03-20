@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Button,message,Icon,Modal} from 'antd';
 import {CopyToClipboard } from 'react-copy-to-clipboard'
 import {configUrl} from '../configUrl/configUrl.js';
-import {arrow} from '../../static/arrow.jpg';
+import arrow from '../../static/arrow.jpg';
 import './voteOne.css';
 let goodsId="";
 let eventId="";
