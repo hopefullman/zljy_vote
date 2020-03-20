@@ -7,7 +7,6 @@ import './voteOne.css';
 let goodsId="";
 let eventId="";
 
-
 class voteOne extends Component{
   constructor(props){
     super(props);
@@ -128,6 +127,13 @@ async  componentDidMount(){
   render(){
     return (
     <div className="voteOne">
+      <div className="ZJL">
+        <div className="qrcode">
+          <span>报名方式</span>
+          <img src={`${this.state.downloadQrcode}`}/>
+          <p>识别上方二维码，下载少儿画app，发布作品参加活动即可！</p>
+        </div>
+      </div>
       <img className="voteOneImg" src={`${this.state.voteOne.pic}`} alt=""/>
       <div className="voteOne_product">作品名称：{this.state.voteOne.title}</div>
       <div className="voteOne_product">作者：{this.state.voteOne.username}</div>
@@ -146,10 +152,7 @@ async  componentDidMount(){
         }
         </div>
       </div>
-      <div className="qrcode">
-        <span>识别下方二维码，下载少儿画app，即可发起投票活动!</span>
-        <img src={`${this.state.downloadQrcode}`}/>
-      </div>
+      
       {
         this.state.voted?<div className="voted_btn_true">
          <Button onClick={this.voted.bind(this)}>已 为 TA 投 票</Button>

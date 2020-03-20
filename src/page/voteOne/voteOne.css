@@ -125,21 +125,42 @@
 	height: 45px;
 	font-size: 16px;
 }
-.qrcode{
+.ZJL{
 	width: 100%;
 	height: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
+	border: 5px solid #d2e8a8;
+	background-color: #02a36f;
+}
+
+.qrcode{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 }
 .qrcode>span{
 	color: #000;
 	font-size: 16px;
+	display: inline-block;
+	padding: 10px;
+	background-color: #02a36f;
+	border:5px dash #d2e8a8; 
+	border-radius: 5px;
 }
 .qrcode>img{
 	display: block;
-	width: 90%;
+	width: 80%;
 	height: auto;
 	margin:0px auto; 
+}
+.qrcode>p{
+	font-size: 16px;
+	margin:0px;
+	padding: 0px; 
 }
