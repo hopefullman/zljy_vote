@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Button,message,Icon,Modal} from 'antd';
 import {CopyToClipboard } from 'react-copy-to-clipboard'
 import {configUrl} from '../configUrl/configUrl.js';
+import {arrow} from '../../static/arrow.jpg';
 import './voteOne.css';
 let goodsId="";
 let eventId="";
@@ -96,7 +97,7 @@ async  componentDidMount(){
           console.log('err voteOne时候，重新在此处获取投票详情详情发生错误！');
         })
       }else{
-        message.info('投票失败！');
+        message.info('投票失败！请您从少儿画微信公众号投票入口进入投票！');
       }
     })
     .catch((err)=>{
@@ -135,6 +136,9 @@ async  componentDidMount(){
           <img src={`${this.state.downloadQrcode}`}/>
           <p>识别上方二维码，下载少儿画app，发布作品参加活动即可！</p>
         </div>
+      </div>
+      <div className="arrow">
+        <img src={arrow}/>
       </div>
       <img className="voteOneImg" src={`${this.state.voteOne.pic}`} alt=""/>
       <div className="voteOne_product">作品名称：{this.state.voteOne.title}</div>
