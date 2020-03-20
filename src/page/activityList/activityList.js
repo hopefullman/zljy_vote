@@ -49,10 +49,10 @@ class activityList extends Component{
                 <h2><Icon type="clock-circle" theme="twoTone" twoToneColor="#52c41a"/>时间：{item.startTime}</h2>
               </div>
               <div className="activity_titles">
-                查看活动详情>>
+                点击查看此活动详情>>
               </div>
             </div>
-            <div className="activityListItem_content" onClick={this.handleShowActivity.bind(this)}>查看少儿画所有活动<Icon type="right" /></div>
+            <div className="activityListItem_content" onClick={this.handleShowActivity.bind(this)}>点击查看少儿画所有活动>></div>
           </div>
         )
       })
