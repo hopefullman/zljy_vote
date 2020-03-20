@@ -144,7 +144,7 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	border: 2px dashed #fff;
+	border: 1px dashed #fff;
 }
 .border{
 	width: auto;
@@ -153,16 +153,15 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	border: 2px dashed #fff;
+	border: 1px dashed #fff;
 }
-.qrcode>span{
-	    color: #fff;
+.qrcode span{
+	color: #fff;
     font-size: 16px;
     padding: 5px 20px;
     background-color: #02a36f;
     border: 5px solid #d2e8a8;
-    border-radius: 3px;
-    margin-top: -5px;
+    margin-top: -7px;
 }
 .qrcode>img{
 	display: block;
@@ -171,6 +170,8 @@
 	margin:5px auto; 
 }
 .qrcode>p{
+	width: 90%;
+	height: auto;
 	font-size: 16px;
 	margin:0px;
 	padding: 0px; 
