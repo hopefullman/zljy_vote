@@ -126,15 +126,15 @@
 	font-size: 16px;
 }
 .ZJL{
-	width: 95%;
-	height: auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-	border: 5px solid #d2e8a8;
-	background-color: #02a36f;
-	box-shadow: green 0px 0px 10px;
+	    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 5px solid #f6aab4;
+    background-color: #f05e5a;
+    box-shadow: 0 0 10px #f6aab4;
 }
 
 .qrcode{
@@ -148,30 +148,32 @@
 }
 .border{
 	width: auto;
+    background: #f05e5a;
 	height: auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	border: 1px dashed #fff;
-	background: #d2e8a8;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px dashed #fff;
+        border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .qrcode span{
-	color: #fff;
+	    color: #fff;
     font-size: 16px;
     padding: 5px 20px;
-    background-color: #02a36f;
-    border: 5px solid #d2e8a8;
+    background-color: #f05e5a;
+    border: 5px solid #f6aab4;
     margin-top: -7px;
-    border-bottom-left-radius:10px;
-    border-bottom-right-radius:10px;
-    font-weight: bold;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-weight: 700;
 }
 .qrcode>img{
 	display: block;
-	width: 80%;
-	height: auto;
-	margin:5px auto; 
+    width: 80%;
+    height: auto;
+    margin: 5px auto;
 }
 .qrcode>p{
 	width: 90%;
@@ -183,19 +185,19 @@
 	text-align: center;
 }
 .arrow{
-	width: 100%;
-	height: 100px;
-	margin: 30px auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	border: 0px;
+	    width: 100%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        height: 50px;
+    border: 0;
 }
 .arrow>img{
 	display: block;
-	width: 80px;
-	height: 100px;
+	width: 40px;
+	height: 50px;
 	border: 0px;
 	-webkit-animation-name:'ripple';/*动画属性名，也就是我们前面keyframes定义的动画名*/
 	-webkit-animation-duration: 1s;/*动画持续时间*/
