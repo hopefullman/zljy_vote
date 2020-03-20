@@ -129,7 +129,9 @@ async  componentDidMount(){
     <div className="voteOne">
       <div className="ZJL">
         <div className="qrcode">
-          <span>报名方式</span>
+          <div className="border">
+            <span>报名方式</span>
+          </div>
           <img src={`${this.state.downloadQrcode}`}/>
           <p>识别上方二维码，下载少儿画app，发布作品参加活动即可！</p>
         </div>
