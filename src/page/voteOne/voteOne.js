@@ -131,10 +131,10 @@ async  componentDidMount(){
       <div className="ZJL">
         <div className="qrcode">
           <div className="border">
-            <span>报名方式</span>
+            <span>参赛方式</span>
           </div>
           <img src={`${this.state.downloadQrcode}`}/>
-          <p>识别上方二维码，下载少儿画app，发布作品参加活动即可！</p>
+          <p>若您想参加大赛，请您在少儿画app中上传画作。识别上方二维码，下载注册登录少儿画app！</p>
         </div>
       </div>
       <div className="arrow">
