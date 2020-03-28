@@ -58,8 +58,7 @@ class activityListDetail extends Component{
                 点击查看此活动详情>>
             </div>
           </div>
-          <div className="activityListItem_content" onClick={this.handleShowActivity.bind(this)}>点击查看少儿画所有活动>>
-          </div>
+          
       </div>
   );
   }

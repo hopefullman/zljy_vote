@@ -15,6 +15,7 @@
 	border: 1px solid #f5e1e1;
 	border-top-left-radius: 10px;
 	border-top-right-radius:10px;
+	border-radius: 10px;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -23,6 +24,7 @@
 .activityListItem_header{
 	/*border-bottom: 1px solid #ddd;*/
 	width: 100%;
+	border-radius: 10px;
 }
 .activityListItem_header>img{
 	display: block;
