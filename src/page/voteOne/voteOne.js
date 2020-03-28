@@ -193,7 +193,7 @@ async  componentDidMount(){
           visible={this.state.visibles}
           onOk={this.handleOks}
           onCancel={this.handleCancels}
-          okText="取消"
+          okText="返回"
           cancelText="关闭"
         >
         <div className="ZJL">

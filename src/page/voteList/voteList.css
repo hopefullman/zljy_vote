@@ -5,6 +5,7 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
+	margin-bottom: 60px;
 }
 .search{
 	/*position: fixed;
@@ -90,5 +91,19 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+}
+.btn{
+	width: 100%;
+	height: 45px;
+	position: fixed;
+	bottom: 0px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+.btn>button{
+	width: 45%;
+	height: 45px;
 }
 
