@@ -108,6 +108,7 @@ class showAllActivityList extends Component{
           </div>
         </div>
       </Modal>
+    </div>
   );
   }
 }
