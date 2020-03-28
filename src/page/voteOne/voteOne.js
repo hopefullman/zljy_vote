@@ -193,8 +193,7 @@ async  componentDidMount(){
           visible={this.state.visibles}
           onOk={this.handleOks}
           onCancel={this.handleCancels}
-          okText="返回"
-          cancelText="关闭"
+          okText="关闭"
         >
         <div className="ZJL">
           <div className="qrcode">
