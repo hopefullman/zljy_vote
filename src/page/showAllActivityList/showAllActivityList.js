@@ -86,7 +86,7 @@ class showAllActivityList extends Component{
         )
       })
     }
-    <div className='btn'> 
+    <div className='btnShowAll'> 
       <Button type="danger" onClick={this.votings.bind(this)}>参与活动</Button>
     </div>
     <Modal
