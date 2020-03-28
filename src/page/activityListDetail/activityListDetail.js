@@ -31,6 +31,8 @@ class activityListDetail extends Component{
     .catch((err)=>{
       console.log('err activityListDetail');
     })
+    let url=window.location.href;
+    this.urls=url.substring(0,url.indexOf("com")+4);
     var u = navigator.userAgent;
     var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
@@ -108,7 +110,6 @@ class activityListDetail extends Component{
               </div>
               <p>若您想参加大赛，请您在少儿画app中上传画作。识别二维码，下载注册登录少儿画app！</p>
               <img src={`${this.state.downloadQrcode}`}/>
-              
             </div>
           </div>
         </Modal>
