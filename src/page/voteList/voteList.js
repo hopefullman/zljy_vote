@@ -132,7 +132,7 @@ class voteList extends Component{
     }
     </div>
     <div className='btn'> 
-      <Button onClick={this.handleShowActivity.bind(this)}>查看所有活动</Button>
+      <Button type="primary" onClick={this.handleShowActivity.bind(this)}>查看所有活动</Button>
       <Button type="danger" onClick={this.votings.bind(this)}>参与活动</Button>
     </div>
     <Modal
