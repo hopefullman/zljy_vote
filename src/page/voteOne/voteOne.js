@@ -16,7 +16,8 @@ class voteOne extends Component{
       voteOne:'',
       voteList:[],
       voted:false,
-      visible:false
+      visible:false,
+      visibles:false
     }
   }
 urls=''
@@ -104,11 +105,27 @@ async  componentDidMount(){
       console.log('err voteOne时候，vote投票发生错误！');
     })
   };
-
+  
   handleCancel = e => {
     console.log(e);
     this.setState({
       visible: false
+    });
+  };
+  votings(){
+    this.setState({
+      visibles: true
+    });
+  }
+  handleOks = e => {
+    this.setState({
+      visibles: false
+    });
+  };
+  handleCancels = e => {
+    console.log(e);
+    this.setState({
+      visibles: false
     });
   };
   voted(){
@@ -119,28 +136,19 @@ async  componentDidMount(){
   });
     message.info('已成功为TA投票，请不要重复投票！')
   }
-  sharing(){
+  // sharing(){
     
-  }
-  onCopy(){
-    alert('复制链接成功！')
-  }
+  // }
+  // onCopy(){
+  //   alert('复制链接成功！')
+  // }
   render(){
     return (
     <div className="voteOne">
-      <div className="ZJL">
-        <div className="qrcode">
-          <div className="border">
-            <span>参赛方式</span>
-          </div>
-          <p>若您想参加大赛，请您在少儿画app中上传画作。识别上方二维码，下载注册登录少儿画app！</p>
-          <img src={`${this.state.downloadQrcode}`}/>
-          
-        </div>
-      </div>
-      <div className="arrow">
+      
+      {/*<div className="arrow">
         <img src={arrow}/>
-      </div>
+      </div>*/}
       <img className="voteOneImg" src={`${this.state.voteOne.pic}`} alt=""/>
       <div className="voteOne_product">作品名称：{this.state.voteOne.title}</div>
       <div className="voteOne_product">作者：{this.state.voteOne.username}</div>
@@ -163,16 +171,10 @@ async  componentDidMount(){
       {
         this.state.voted?<div className="voted_btn_true">
          <Button onClick={this.voted.bind(this)}>已 为 TA 投 票</Button>
-        <CopyToClipboard text={`${this.urls}logo.jpg`} onCopy={this.onCopy.bind(this)}>
-          <Button type="danger">复制公众号二维码</Button>
-         </CopyToClipboard>
+          <Button type="danger" onClick={this.votings.bind(this)}>参与活动</Button>
       </div>:<div className="voted_btn_false">
         <Button type="primary" onClick={this.voting.bind(this)}>为 TA 投 票</Button>
-      
-        <CopyToClipboard text={`${this.urls}logo.jpg`} onCopy={this.onCopy.bind(this)}>
-          <Button type="danger" >复制公众号二维码</Button>
-        </CopyToClipboard>
-        
+        <Button type="danger" onClick={this.votings.bind(this)}>参与活动</Button>
       </div>
       }      
       <Modal
@@ -184,6 +186,26 @@ async  componentDidMount(){
           cancelText="再想想"
         >
           <p style={{color:'#1890ff'}}>确定为{this.state.voteOne.username}的{this.state.voteOne.title}投票？</p>
+      </Modal>
+
+      <Modal
+          title=<p style={{color:"#1890ff"}}>参加活动提醒</p>
+          visible={this.state.visibles}
+          onOk={this.handleOks}
+          onCancel={this.handleCancels}
+          okText="返回"
+          cancelText="关闭"
+        >
+        <div className="ZJL">
+          <div className="qrcode">
+            <div className="border">
+              <span>参赛方式</span>
+            </div>
+            <p>若您想参加大赛，请您在少儿画app中上传画作。识别二维码，下载注册登录少儿画app！</p>
+            <img src={`${this.state.downloadQrcode}`}/>
+            
+          </div>
+        </div>
       </Modal>
     </div>
   );

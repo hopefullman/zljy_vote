@@ -53,6 +53,7 @@ class showAllActivityList extends Component{
         )
       })
     }
+    
     </div>
   );
   }
