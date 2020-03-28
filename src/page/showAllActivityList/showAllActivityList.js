@@ -1,6 +1,6 @@
 import React ,{Component} from 'react';
 import axios from 'axios';
-import { Icon } from 'antd';
+import { Icon ,Modal,Button} from 'antd';
 import {configUrl} from '../configUrl/configUrl.js';
 import './showAllActivityList.css';
 
