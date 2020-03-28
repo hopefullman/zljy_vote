@@ -56,7 +56,7 @@ class showAllActivityList extends Component{
     });
   };
   handleActivityItem(eventId){
-    this.props.history.push(`/activityListDetail/${eventId}`);
+    this.props.history.push(`/voteList/${eventId}`);
   }
   render(){
     return (
@@ -78,6 +78,7 @@ class showAllActivityList extends Component{
               <div className="activity_title">
                 <h2><Icon type="clock-circle" theme="twoTone" twoToneColor="#52c41a"/>时间：{item.startTime}</h2>
               </div>
+              <div className="activity_content">简介：{item.content}</div>
               <div className="activity_titles">
                 点击查看此活动详情>>
               </div>
