@@ -17,6 +17,7 @@ class showAllActivityList extends Component{
   componentDidMount(){
     axios.get(`${configUrl}api/event/list`)
     .then((res)=>{
+       console.log('查看全部showAllActivityList数据',res);
       this.setState({
         activityList:res.data.content
       })

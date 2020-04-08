@@ -24,6 +24,7 @@ class activityListDetail extends Component{
     let eventId=this.props.match.params.eventId;
     axios.get(`${configUrl}api/event/${eventId}`)
     .then((res)=>{
+      console.log('查看全部activityListDetail数据',res);
       this.setState({
         activityListDetail:res.data
       })
