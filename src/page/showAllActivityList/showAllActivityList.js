@@ -77,7 +77,7 @@ class showAllActivityList extends Component{
                 <h2><Icon type="environment" theme="twoTone" twoToneColor="#bfbfbf"/>位置：{item.city}</h2>
               </div>*/}
               <div className="activity_title">
-                <h2><Icon type="clock-circle" theme="twoTone" twoToneColor="#52c41a"/>时间：{item.startTime}</h2>
+                <h2><Icon type="clock-circle" theme="twoTone" twoToneColor="#52c41a"/>截止时间：{item.endTime}</h2>
               </div>
               <div className="activity_content">简介：{item.content}</div>
               <div className="activity_titles">

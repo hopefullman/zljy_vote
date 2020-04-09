@@ -84,7 +84,7 @@ class activityListDetail extends Component{
                 <h2><Icon type="environment" theme="twoTone" twoToneColor="#bfbfbf"/>位置：{this.state.activityListDetail.city}</h2>
               </div>*/}
               <div className="activity_title">
-                <h2><Icon type="clock-circle" theme="twoTone" twoToneColor="#52c41a"/>时间：{this.state.activityListDetail.startTime}</h2>
+                <h2><Icon type="clock-circle" theme="twoTone" twoToneColor="#52c41a"/>截止时间：{this.state.activityListDetail.endTime}</h2>
               </div>
               <div className="activity_content">简介：{this.state.activityListDetail.content}</div>
             </div>
