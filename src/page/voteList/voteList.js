@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Button,Icon,Input,Modal} from 'antd';
 import {configUrl} from '../configUrl/configUrl.js';
 import './voteList.css';
-
+import qrcode from '../../static/qrcode.png';
 class voteList extends Component{
   constructor(props){
     super(props);
@@ -14,7 +14,7 @@ class voteList extends Component{
       visibles:false
     }
   }
-  urls=''
+  // urls=''
   componentDidMount(){
     let eventId=this.props.match.params.eventId;
     axios.get(`${configUrl}api/goods/contribute/list/${eventId}`)
@@ -27,20 +27,20 @@ class voteList extends Component{
     .catch((err)=>{
       console.log('err voteList');
     })
-    let url=window.location.href;
-    this.urls=url.substring(0,url.indexOf("com")+4);
-    var u = navigator.userAgent;
-    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
-    if(isiOS){
-        this.setState({
-          downloadQrcode:this.urls+'qrcodeios.png'
-        })
-    }else if(isAndroid){
-        this.setState({
-          downloadQrcode:this.urls+'qrcodeandroid.png'
-        })
-    }
+    // let url=window.location.href;
+    // this.urls=url.substring(0,url.indexOf("com")+4);
+    // var u = navigator.userAgent;
+    // var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    // var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+    // if(isiOS){
+    //     this.setState({
+    //       downloadQrcode:this.urls+'qrcodeios.png'
+    //     })
+    // }else if(isAndroid){
+    //     this.setState({
+    //       downloadQrcode:this.urls+'qrcodeandroid.png'
+    //     })
+    // }
   }
   onFocusSearch(){
     this.props.history.push("/Search");
@@ -149,7 +149,7 @@ class voteList extends Component{
               <span>参赛方式</span>
             </div>
             <p>若您想参加大赛，请您在少儿画app中上传画作。识别二维码，下载注册登录少儿画app！</p>
-            <img src={`${this.state.downloadQrcode}`}/>
+            <img src={qrcode}/>
             
           </div>
         </div>

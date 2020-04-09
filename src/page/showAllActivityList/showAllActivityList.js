@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Icon ,Modal,Button} from 'antd';
 import {configUrl} from '../configUrl/configUrl.js';
 import './showAllActivityList.css';
-
+import qrcode from '../../static/qrcode.png';
 class showAllActivityList extends Component{
   constructor(props){
     super(props);
@@ -13,7 +13,7 @@ class showAllActivityList extends Component{
       downloadQrcode:''
     }
   }
-  urls=''
+  // urls=''
   componentDidMount(){
     axios.get(`${configUrl}api/event/list`)
     .then((res)=>{
@@ -25,20 +25,20 @@ class showAllActivityList extends Component{
     .catch((err)=>{
       console.log('err activityList');
     })
-    let url=window.location.href;
-    this.urls=url.substring(0,url.indexOf("com")+4);
-    var u = navigator.userAgent;
-    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
-    if(isiOS){
-        this.setState({
-          downloadQrcode:this.urls+'qrcodeios.png'
-        })
-    }else if(isAndroid){
-        this.setState({
-          downloadQrcode:this.urls+'qrcodeandroid.png'
-        })
-    }
+    // let url=window.location.href;
+    // this.urls=url.substring(0,url.indexOf("com")+4);
+    // var u = navigator.userAgent;
+    // var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    // var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+    // if(isiOS){
+    //     this.setState({
+    //       downloadQrcode:this.urls+'qrcodeios.png'
+    //     })
+    // }else if(isAndroid){
+    //     this.setState({
+    //       downloadQrcode:this.urls+'qrcodeandroid.png'
+    //     })
+    // }
   }
   votings(){
     this.setState({
@@ -105,7 +105,7 @@ class showAllActivityList extends Component{
               <span>参赛方式</span>
             </div>
             <p>若您想参加大赛，请您在少儿画app中上传画作。识别二维码，下载注册登录少儿画app！</p>
-            <img src={`${this.state.downloadQrcode}`}/>
+            <img src={qrcode}/>
             
           </div>
         </div>

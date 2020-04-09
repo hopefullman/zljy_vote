@@ -5,6 +5,7 @@ import {CopyToClipboard } from 'react-copy-to-clipboard'
 import {configUrl} from '../configUrl/configUrl.js';
 import arrow from '../../static/arrow.jpg';
 import './voteOne.css';
+import qrcode from '../../static/qrcode.png';
 let goodsId="";
 let eventId="";
 
@@ -20,7 +21,7 @@ class voteOne extends Component{
       visibles:false
     }
   }
-urls=''
+// urls=''
 async  componentDidMount(){
     let url=window.location.href;
     this.urls=url.substring(0,url.indexOf("com")+4);
@@ -50,18 +51,18 @@ async  componentDidMount(){
       console.log('err voteOne时候，HAS取投票详情发生错误！');
       message.info('投票失败！请您从少儿画微信公众号投票入口进入投票！');
     })
-    var u = navigator.userAgent;
-    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
-    if(isiOS){
-        this.setState({
-          downloadQrcode:this.urls+'qrcodeios.png'
-        })
-    }else if(isAndroid){
-        this.setState({
-          downloadQrcode:this.urls+'qrcodeandroid.png'
-        })
-    }
+    // var u = navigator.userAgent;
+    // var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    // var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+    // if(isiOS){
+    //     this.setState({
+    //       downloadQrcode:this.urls+'qrcodeios.png'
+    //     })
+    // }else if(isAndroid){
+    //     this.setState({
+    //       downloadQrcode:this.urls+'qrcodeandroid.png'
+    //     })
+    // }
   }
   voting(){
     this.setState({
@@ -205,7 +206,7 @@ async  componentDidMount(){
               <span>参赛方式</span>
             </div>
             <p>若您想参加大赛，请您在少儿画app中上传画作。识别二维码，下载注册登录少儿画app！</p>
-            <img src={`${this.state.downloadQrcode}`}/>
+            <img src={qrcode}/>
             
           </div>
         </div>
