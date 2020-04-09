@@ -70,12 +70,12 @@ class showAllActivityList extends Component{
               <img src={`${item.cover}`}  alt=""/>
               <div className="activity_title"><h1><Icon type="tags" theme="twoTone" twoToneColor="#faad14"/>标题：{item.title}</h1>
               </div>
-              <div className="activity_title">
+             {/* <div className="activity_title">
                 <h2><Icon type="book" theme="twoTone" twoToneColor="#096dd9"/>编号：{item.id}</h2>
               </div>
               <div className="activity_title">
                 <h2><Icon type="environment" theme="twoTone" twoToneColor="#bfbfbf"/>位置：{item.city}</h2>
-              </div>
+              </div>*/}
               <div className="activity_title">
                 <h2><Icon type="clock-circle" theme="twoTone" twoToneColor="#52c41a"/>时间：{item.startTime}</h2>
               </div>
@@ -89,7 +89,7 @@ class showAllActivityList extends Component{
       })
     }
     <div className='btnShowAll'> 
-      <Button type="danger" onClick={this.votings.bind(this)}>参与活动</Button>
+      <Button type="danger" onClick={this.votings.bind(this)}>下载App参与活动</Button>
     </div>
     <Modal
           title=<p style={{color:"#1890ff"}}>参加活动提醒</p>

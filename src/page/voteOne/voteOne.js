@@ -171,10 +171,10 @@ async  componentDidMount(){
       {
         this.state.voted?<div className="voted_btn_true">
          <Button onClick={this.voted.bind(this)}>已 为 TA 投 票</Button>
-          <Button type="danger" onClick={this.votings.bind(this)}>参与活动</Button>
+          <Button type="danger" onClick={this.votings.bind(this)}>下载App参与活动</Button>
       </div>:<div className="voted_btn_false">
         <Button type="primary" onClick={this.voting.bind(this)}>为 TA 投 票</Button>
-        <Button type="danger" onClick={this.votings.bind(this)}>参与活动</Button>
+        <Button type="danger" onClick={this.votings.bind(this)}>下载App参与活动</Button>
       </div>
       }      
       <Modal

@@ -133,7 +133,7 @@ class voteList extends Component{
     </div>
     <div className='btn'> 
       <Button type="primary" onClick={this.handleShowActivity.bind(this)}>查看所有活动</Button>
-      <Button type="danger" onClick={this.votings.bind(this)}>参与活动</Button>
+      <Button type="danger" onClick={this.votings.bind(this)}>下载App参与活动</Button>
     </div>
     <Modal
           title=<p style={{color:"#1890ff"}}>参加活动提醒</p>

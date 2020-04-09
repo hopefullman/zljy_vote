@@ -77,12 +77,12 @@ class activityListDetail extends Component{
               <img src={`${this.state.activityListDetail.cover}`}  alt=""/>
               <div className="activity_title"><h1><Icon type="tags" theme="twoTone" twoToneColor="#faad14"/>标题：{this.state.activityListDetail.title}</h1>
               </div>
-              <div className="activity_title">
+             {/* <div className="activity_title">
                 <h2><Icon type="book" theme="twoTone" twoToneColor="#096dd9"/>编号：{this.state.activityListDetail.id}</h2>
               </div>
               <div className="activity_title">
                 <h2><Icon type="environment" theme="twoTone" twoToneColor="#bfbfbf"/>位置：{this.state.activityListDetail.city}</h2>
-              </div>
+              </div>*/}
               <div className="activity_title">
                 <h2><Icon type="clock-circle" theme="twoTone" twoToneColor="#52c41a"/>时间：{this.state.activityListDetail.startTime}</h2>
               </div>
@@ -94,7 +94,7 @@ class activityListDetail extends Component{
           </div>
           <div className='btn'> 
             <Button type="primary" onClick={this.handleShowActivity.bind(this)}>查看所有活动</Button>
-            <Button type="danger" onClick={this.votings.bind(this)}>参与活动</Button>
+            <Button type="danger" onClick={this.votings.bind(this)}>下载App参与活动</Button>
           </div>
         <Modal
           title=<p style={{color:"#1890ff"}}>参加活动提醒</p>
