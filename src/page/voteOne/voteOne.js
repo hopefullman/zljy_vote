@@ -48,6 +48,7 @@ async  componentDidMount(){
     })
     .catch((err)=>{
       console.log('err voteOne时候，HAS取投票详情发生错误！');
+      message.info('投票失败！请您从少儿画微信公众号投票入口进入投票！');
     })
     var u = navigator.userAgent;
     var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
